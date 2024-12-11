@@ -1,0 +1,653 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+section {
+    margin-top: 50px;
+}
+
+header {
+    background-color: #ffffff;
+    ;
+    position: fixed;
+    top: 1px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+    padding: 0 5%;
+
+}
+
+.menu-item:hover {
+    color: blue;
+}
+
+/* Style pour le lien actif */
+.menu-item.active {
+    color: blue;
+    font-weight: bold;
+}
+
+header .logo a {
+    font-size: 30px;
+    color: #295bd9;
+
+}
+
+header .logo a span {
+    color: #080000;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    margin: 0 25px;
+    list-style-type: none;
+}
+
+.menu li a {
+    color: #080000;
+    font-size: 14px;
+}
+
+.btn-reservation {
+    color: #295bd9;
+    font-size: 8px;
+    border: 2px solid #295bd9;
+    padding: 5px 20px;
+    transition: 0.5s;
+    font-weight: bolder;
+}
+
+.btn-reservation:hover {
+    background-color: #295bd9;
+    color: #fff;
+
+}
+
+/* Home acceuil CSS */
+
+.arr {
+    display: flex;
+    justify-content: space-between;
+}
+
+#home {
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#home h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    -webkit-text-stroke: #fff 0.02px;
+    color: transparent;
+    text-transform: lowercase;
+}
+
+#home h4 {
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+#home p {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.home-btn {
+    margin-bottom: 20px;
+}
+
+.find_trip {
+    background-color: #222;
+    padding: 20px;
+    width: 70%;
+    position: absolute;
+    bottom: -50px;
+}
+
+.find_trip form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.find_trip form div,
+.find_trip form input[type="submit"] {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.find_trip form label {
+    color: #999;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.find_trip form input {
+    padding: 5px 20px;
+    background-color: transparent;
+    border: 1px solid #295bd9;
+    outline: 0;
+    width: 100%;
+    font-size: 13px;
+    color: #fff;
+}
+
+.find_trip form input[type="submit"] {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #295bd9;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.find_trip form input[type="submit"]:hover {
+    box-shadow: 0 0 10px #295bd9;
+}
+
+/*A propos CSS*/
+#a-propos {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 0 10%;
+    width: 100%;
+}
+
+.title {
+    text-transform: capitalize;
+    margin: 70px 0;
+    font-weight: bold;
+    color: #295bd9;
+    position: relative;
+    margin-left: 15px;
+    font-size: 18px;
+
+}
+
+.title::after {
+    position: absolute;
+    left: -15px;
+    content: "";
+    height: 100%;
+    background-color: #fff;
+    width: 5px;
+}
+
+.img-desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.img-desc .left {
+    position: relative;
+    margin-left: 10px;
+    height: 250px;
+    width: 50%;
+}
+
+.img-desc .right {
+    width: 37%;
+}
+
+.img-desc .left::after {
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.img-desc .right h3 {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 20px;
+
+}
+
+.img-desc .right p {
+    color: #999;
+    font-size: 20px;
+    font: 14px;
+    margin-bottom: 36px;
+}
+
+.img-desc .right a {
+    border: 1px solid #295bd9;
+    color: #295bd9;
+    font-size: 14px;
+    padding: 8px 25px;
+    font-weight: bold;
+}
+
+
+footer {
+    width: 100%;
+    background-color: #222;
+    padding: 10px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+footer p {
+    color: #fff;
+}
+
+footer p span {
+    color: #295bd9;
+}
+
+.responsive-menu {
+    display: none;
+}
+
+
+
+
+/*****************************************/
+
+
+/* Conteneur du carousel qui occupe toute la largeur et hauteur */
+.carousel {
+    padding-top: 10px;
+    width: 100%;
+    height: 70vh;
+    /* 100% de la hauteur de la fenêtre */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Conteneur des images, en flexbox, pour les disposer côte à côte */
+.carousel-images {
+    display: flex;
+    width: 300%;
+    /* 3 images = 100% * 3 */
+    transition: transform 1s ease;
+    /* Transition fluide pour le défilement */
+}
+
+/* Styles pour les images */
+.carousel-images img {
+    width: 100vw;
+    /* Chaque image prend 100% de la largeur de la fenêtre */
+    height: 100vh;
+    /* Chaque image prend 100% de la hauteur de la fenêtre */
+    object-fit: cover;
+    /* Garde l'image bien dimensionnée sans déformation */
+}
+
+
+/*    produits */
+@media (max-width: 768px) {
+    .produit {
+        margin-top: 5%;
+        margin-left: 0;
+        text-align: center;
+        font-size: 1.5rem;
+        color: #888;
+        opacity: 0.8;
+        letter-spacing: 1px;
+
+    }
+}
+
+/* Vous pouvez ajouter d'autres règles pour les grands écrans si nécessaire */
+@media (min-width: 1200px) {
+    .produit {
+        text-align: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: #295bd9;
+        opacity: 0.8;
+        margin-top: 5%;
+        letter-spacing: 1px;
+    }
+}
+
+
+.apropos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.apropos img {
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    border-radius: 8px;
+}
+
+.apropos-text {
+    width: 55%;
+    /* Text takes 55% of the width */
+    padding-left: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.apropos-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #004085;
+    /* Blue for the heading */
+}
+
+.apropos-text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .apropos {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .apropos img {
+        width: 80%;
+        margin-top: 5%;
+        margin-bottom: 20px;
+    }
+
+    .apropos-text {
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .apropos img {
+        width: 25%;
+        margin-right: 100px;
+    }
+
+    .apropos-text {
+        padding-left: 1px;
+        margin-left: 150px;
+    }
+}
+
+
+
+
+/*Destination CSS*/
+#popular-destination {
+    padding: 0 10%;
+    margin-bottom: 50px;
+  }
+  
+  #popular-destination .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+  }
+  
+  #popular-destination .content .box {
+    border: 2px solid rgb(39, 140, 248);
+    overflow: hidden;
+    position: relative;
+    height: 350px;
+    width: 100%;
+    gap: 30%;
+    transition: 0.5s;
+  }
+  
+  #popular-destination .content .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    text-align: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: 0.5s;
+  }
+  
+  .box .content h4 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  
+  .box .content p {
+    margin-top: 10px;
+    font-size: 12px;
+    margin-left: 20px;
+    text-align: center;
+  }
+  
+  .box .content p:nth-child(3) {
+    margin-bottom: 25px;
+  }
+  
+  .box .content a {
+    margin-top: 100px;
+    padding-top: 100px;
+    padding: 10px 40px;
+    text-decoration: none;
+    border: 1px solid rgb(39, 140, 248);
+    color: rgb(39, 140, 248);
+    font-weight: bold;
+  }
+  
+  .box:hover {
+    box-shadow: 0 0 3px rgb(39, 140, 248);
+  }
+  
+  .box:hover .content {
+    transform: translateX(0);
+  }
+  
+  
+  
+  /* Style de base pour les boîtes */
+  #popular-destination .box {
+    margin: 20px;
+    /* Ajouter un peu d'espace entre chaque box sur les grands écrans */
+    width: 30%;
+    /* Ajuster la largeur des boîtes pour les grands écrans */
+    display: inline-block;
+  }
+  
+  /* Styles pour les grands écrans */
+  @media (min-width: 1200px) {
+    #popular-destination .content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      /* Espace entre les boîtes */
+    }
+  
+    #popular-destination .box {
+      margin: 20px;
+      /* Espacement entre les images */
+      width: 30%;
+      /* Largeur pour les grands écrans */
+    }
+  }
+  
+  /* Styles pour les petits écrans (max-width: 768px) */
+  @media (max-width: 768px) {
+    #popular-destination .content {
+      display: flex;
+      flex-direction: column;
+      /* Disposer les boîtes en colonne */
+      align-items: stretch;
+      /* Les boîtes s'étendent sur toute la largeur */
+    }
+  
+    #popular-destination .box {
+      margin: 0;
+      /* Enlever la marge pour que les boîtes soient collées aux côtés */
+      width: 100%;
+      /* Largeur à 100% pour qu'elles prennent toute la largeur */
+    }
+  
+    #popular-destination .box img {
+      width: 100%;
+      /* S'assurer que les images prennent toute la largeur de la boîte */
+      height: auto;
+      /* Gérer la hauteur automatiquement */
+    }
+  }
+  
+
+  
+/*    produits */
+@media (max-width: 768px) {
+    h5{
+      margin-left: 0;
+      text-align: center;
+      font-size: 1.5rem;
+      color: #888;
+      opacity: 0.8;
+      letter-spacing: 1px;
+      
+    }
+  }
+  
+  /* Vous pouvez ajouter d'autres règles pour les grands écrans si nécessaire */
+  @media (min-width: 1200px) {
+    h5 {
+      text-align: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: #888;
+      opacity: 0.8;
+      margin-top: -1%;
+      letter-spacing: 1px;
+    }
+  }
+  
+  
+  
+  /*    produits */
+  @media (max-width: 768px) {
+    .produit{
+      margin-top: 5%;
+      margin-left: 0;
+      text-align: center;
+      font-size: 1.5rem;
+      color: #888;
+      opacity: 0.8;
+      letter-spacing: 1px;
+      
+    }
+  }
+  
+  /* Vous pouvez ajouter d'autres règles pour les grands écrans si nécessaire */
+  @media (min-width: 1200px) {
+    .produit {
+      text-align: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #888;
+      opacity: 0.8;
+      letter-spacing: 1px;
+    }
+  }
+  
+
+
+  /* Styles pour la section contact */
+#contatc {
+    padding: 20px;
+  }
+  
+  /* Style général pour les boîtes */
+  #contatc .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  /* Style des images pour les rendre rondes */
+  #contatc .box img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+  }
+  
+  /* Style des informations sous les images */
+  #contatc .box .info {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Disposition des boîtes */
+  #contatc .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  
+  .bas {
+    padding-top: 2%;
+}

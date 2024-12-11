@@ -1,0 +1,235 @@
+  <footer>
+    <div class="footer-container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="../../../../assets/Images/Noir.png" alt="Logo">
+        </div>
+
+        <!-- Navigation -->
+        <ul class="menu">
+            <li><a routerLink="" routerLinkActive="active">Accueil</a></li>
+            <li><a routerLink="/propos" routerLinkActive="active">A propos</a></li>
+            <li><a routerLink="/service" routerLinkActive="active">Services</a></li>
+            <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+        </ul>
+
+        <ul class="menu">
+            <li><a routerLink="/blog" routerLinkActive="active">Blogs</a></li>
+            <li><a id="partenaire">Nos partenaires</a></li>
+            <li><a routerLink="/propos" routerLinkActive="active">Notre equipe</a></li>
+            <li><a routerLink="/service" routerLinkActive="active">Nos réalisations</a></li>
+        </ul>
+
+        <!-- Contact et Réseaux -->
+        <div class="contact-info">
+            <p>+228 90000379</p>
+            <p>digicommgroup&#64;gmail.com</p>
+            <div class="social-icons">
+                <a href="#"><img src="../../../../assets/Images/face.png" alt="Facebook"></a>
+                <a href="#"><img src="../../../../assets/Images/inst.png" alt="Twitter"></a>
+                <a href="#"><img src="../../../../assets/Images/tik.webp" alt="Instagram"></a>
+                <a href="#"><img src="../../../../assets/Images/youtu.jpg" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+
+    <p class="bas">Copyright © &#64;2024 DigiCom Group. Tous droits réservés
+</p>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #f2f2f2;
+    color: #000000;
+    padding: 10px 20px;
+    height: 100%;
+
+}
+
+.footer-container {
+    padding-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    padding-top: 10%;
+    height: 250px;
+}
+
+
+.menu {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu li {
+    text-decoration: none;
+    width: 100%;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #040000;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+}
+
+.menu li a:hover {
+    text-decoration: none;
+    color: rgb(39, 140, 248);
+}
+
+
+.contact-info {
+    text-align: left;
+
+}
+
+.contact-info p {
+    gap: 30px;
+margin-left: 30%;
+
+}
+
+.social-icons {
+    display: flex;
+    gap: 30px;
+
+}
+
+.social-icons img {
+    width: 100%;
+    height: 25px;
+        margin-left: 70%;
+
+}
+
+.bas {
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 5%;
+}
+
+
+
+
+/* Media Queries for Responsive Design */
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo img {
+        padding-top: 5%;
+        max-width: 120px;
+    }
+
+    .menu {
+        gap: 20px;
+    }
+
+    .contact-info {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .social-icons {
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .bas {
+        padding-top: 3%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo img {
+        max-width: 100px;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+    }
+
+    .menu li a {
+        font-size: 14px;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+        margin-left: 0;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .bas {
+        padding-top: 2%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo img {
+        max-width: 100px;
+    }
+
+    .menu li a {
+        font-size: 14px;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+        margin-left: 0;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .bas {
+        padding-top: 2%;
+    }
+}
